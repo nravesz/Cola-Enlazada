@@ -33,7 +33,7 @@ cola_t* cola_crear(void){
 }
 
 void cola_destruir(cola_t *cola, void destruir_dato(void*)){
-	struct nodo_t* nodo = cola->prim;
+	nodo_t* nodo = cola->prim;
 	while(nodo != NULL){
 		nodo_t* aux = nodo->prox;
 		if (destruir_dato != NULL){
