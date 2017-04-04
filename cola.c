@@ -8,7 +8,7 @@
 
 typedef struct nodo{
 	void* dato;
-	struct nodo_t* prox;
+	struct nodo* prox;
 } nodo_t;
 
 struct cola{
@@ -23,7 +23,7 @@ struct cola{
 nodo_t* crear_nodo();
 
 cola_t* cola_crear(void){
-	cola_t* cola = malloc(sizeof(cola_t*));
+	cola_t* cola = malloc(sizeof(cola_t));
 	if (cola == NULL){
 		return NULL;
 	}
@@ -94,7 +94,7 @@ void* cola_desencolar(cola_t *cola){
 }
 
 
-/* Funciones auxiliares o para las pruebas :) */
+/* Funciones auxiliares :)*/
 nodo_t* crear_nodo(){
 	nodo_t* nodo = malloc(sizeof(nodo_t));
 	if (nodo == NULL){
